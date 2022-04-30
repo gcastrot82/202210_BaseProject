@@ -10,6 +10,7 @@ import { Cafe } from './cafe';
 export class CafeListComponent implements OnInit {
 
   cafes: Array<Cafe>= [];
+  numeroFila:number=0;
 
   constructor(private cafeService: CafeService) { }
 
@@ -19,8 +20,12 @@ export class CafeListComponent implements OnInit {
       this.cafes= cafes;
     });
 
+
   }
 
+  obtenerNumeroFila():number{
+    return this.numeroFila;
+  }
   ngOnInit() {
     this.getCafes();
   }
