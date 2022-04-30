@@ -1,7 +1,12 @@
 <testExecutions version="1">
+  <file path="src/app/cafe/cafe-list/cafe-list.component.spec.ts">
+    <testCase name="BookListComponent consultar un registro de los anteriores tres creados " duration="37"/>
+    <testCase name="BookListComponent Tabla creada con encabezado" duration="7"/>
+    <testCase name="BookListComponent El resultado del tesr, tiene una tabla con tres filas y un encabezado" duration="7"/>
+    <testCase name="BookListComponent Registros creados" duration="5"/>
+  </file>
   <file path="src/app/app.component.spec.ts">
-    <testCase name="AppComponent should have as title 'base-project'" duration="118"/>
-    <testCase name="AppComponent should create the app" duration="14"/>
-    <testCase name="AppComponent should render title" duration="13"/>
+    <testCase name="AppComponent should create the app" duration="6"/>
+    <testCase name="AppComponent should have as title 'base-project'" duration="3"/>
   </file>
 </testExecutions>

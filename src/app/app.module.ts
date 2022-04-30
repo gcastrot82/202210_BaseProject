@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CafeListComponent } from './cafe/cafe-list/cafe-list.component';
 import { CafeModule } from './cafe/cafe.module';
 
 @NgModule({
@@ -11,10 +12,13 @@ import { CafeModule } from './cafe/cafe.module';
     AppComponent
   ],
   imports: [
+
     BrowserModule,
     AppRoutingModule,
     CafeModule,
     HttpClientModule
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -20,24 +20,31 @@ export class CafeListComponent implements OnInit {
   getCafes():void{
     this.cafeService.getCafes().subscribe((cafes)=>{
       this.cafes= cafes;
+
+      for(let cafe in cafes){
+
+      if (cafes[cafe].tipo=='Blend'){
+        this.cantidadCafeTipoBlend+=1;
+      }
+      else if(cafes[cafe].tipo=='Café de Origen'){
+        this.cantidadCafeTipoOrigen+=1;
+      }
+    }
+
+
     });
 
   }
-  obtenerCantidadTipoCafe(cafe:string):void{
-    if (cafe=='Blend'){
-      this.cantidadCafeTipoBlend+=1;
-    }
-    else if(cafe=='Café de Origen'){
-      this.cantidadCafeTipoOrigen+=1;
-    }
 
 
-  }
+
+
 
 
 
   ngOnInit() {
     this.getCafes();
+
   }
 
 }
