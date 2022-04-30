@@ -10,7 +10,9 @@ import { Cafe } from './cafe';
 export class CafeListComponent implements OnInit {
 
   cafes: Array<Cafe>= [];
-  numeroFila:number=0;
+
+  cantidadCafeTipoBlend:number=0;
+  cantidadCafeTipoOrigen:number=0;
 
   constructor(private cafeService: CafeService) { }
 
@@ -20,12 +22,20 @@ export class CafeListComponent implements OnInit {
       this.cafes= cafes;
     });
 
+  }
+  obtenerCantidadTipoCafe(cafe:string):void{
+    if (cafe=='Blend'){
+      this.cantidadCafeTipoBlend+=1;
+    }
+    else if(cafe=='Café de Origen'){
+      this.cantidadCafeTipoOrigen+=1;
+    }
+
 
   }
 
-  obtenerNumeroFila():number{
-    return this.numeroFila;
-  }
+
+
   ngOnInit() {
     this.getCafes();
   }

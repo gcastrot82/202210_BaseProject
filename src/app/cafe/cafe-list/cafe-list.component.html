@@ -49,17 +49,24 @@
           </tr>
         </thead>
         <tbody>
-          <tr  *ngFor="let cafe of cafes">
+
+          <tr  *ngFor="let cafe of cafes;">
             <th scope="row">{{cafe.id}}</th>
             <td>{{cafe.nombre}}</td>
             <td>{{cafe.tipo}}</td>
             <td>{{cafe.region}}</td>
+            {{obtenerCantidadTipoCafe(cafe.tipo)}}
+
+
           </tr>
           <tr>
 
-
         </tbody>
       </table>
+      <p>
+        <span>Total Café de Origen: {{cantidadCafeTipoOrigen}} <br>Total Café Blend: {{cantidadCafeTipoBlend}}</span>
+      </p>
+
     </div>
 
 
